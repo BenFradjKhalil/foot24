@@ -1,0 +1,14 @@
+.info_text{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    padding: 5px 15px;
+    
+}
+.info_text_titre{
+    background-color: #EEEEEE;
+}
+.time{
+    font-size: 18px;
+}
