@@ -88,10 +88,7 @@
                                 <div class="card-body">
                                <button class=" btn-success"> الاخبار الوطنية </button>                            
                                <p class="card-text mb-0">{{ articlep.contenu }}</p>
-                               <p class="card-text">
-                                <small class="card-text">
-                                {{ articlep.date_publication }}
-                            </small>
+                             
                             </p>
                               </div>
                               </div> 
@@ -103,19 +100,14 @@
                                   <img src="{{ article.images.url }}" class="w-100 card-img-top" style="height: 250px;">
                                   <div class="card-body">
                                   <button class=" btn-success"> الاخبار الوطنية </button>                                
-                                  <p class=" mt-3 card-text mb-0">{{ article.contenu }}</p> 
-                                  <p class="card-text">
-                                    <small class="card-text">
-                                    {{ article.date_publication }}
-                                </small>
-                                </p>
+                                  <p class=" mt-2 card-text mb-0">{{ article.contenu }}</p> 
                                 </div>  
                                 </div>       
                           </div>
                           {% endfor %}
                         
                       <div class="col-12">    
-                        <div class="card mb-3">
+                        <div class="card mb-3 mt-3">
                           <div class="row">
                             {% for articlec in articless %}
                             
@@ -158,15 +150,18 @@
                     <div class="info-contenu">
                       <div class="col-12 mb-3">
                       <div class="row"> 
-                        <div class="col-6 bg-light text-end" style="height: 100px; font-size: 12px;">
-                          <p></p>
+                        {% for darticle in darticles %}
+                            
+                        <div class="col-6 bg-light text-end " style="height: 100px; font-size: 12px;">
+                          <p class="taille">{{ darticle.contenu }}</p>
                          </div>
                          <div class="col-3">
-                          <img src="assets/img/club afrcain.jpg" class="w-100" height="90px" >
+                          <img src="{{ darticle.images.url }}" class="w-100" height="90px" >
                         </div>
                          <div class="col-3 text-end">
-                          <p class="bg-light w-100 text-dark time mt-1 px-1 text-center text-right ">12:56</p>
+                          <p class="bg-light w-100 text-dark time mt-1 px-1 text-center text-right taille">{{ darticle.date_publication }}</p>
                         </div>
+                        {% endfor %}  
                          </div>
                        </div> 
                         </div>
