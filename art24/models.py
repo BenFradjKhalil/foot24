@@ -11,9 +11,7 @@ class Articles(models.Model):
         return self.contenu
 
 class Articles_principale(models.Model):
-    titre=models.CharField(max_length=150)
-    contenu=models.TextField()
-    information=models.TextField()
+    contenu=models.TextField() 
     slug=models.SlugField(max_length=150)
     date_publication=models.DateTimeField(auto_now_add=True)
     images=models.ImageField(default='default.jpg')
