@@ -88,7 +88,8 @@
                                 <img src="{{ articlep.images.url }}" class="w-100 card-img-top">
                               
                                 <div class="card-body">
-                               <button class=" btn-success"> الاخبار الوطنية </button>                            
+                               <button class=" btn-success"> الاخبار الوطنية </button>
+                               <p class="card-text mb-0">{{ articlep.titre }}</p>                       
                                <p class="card-text mb-0">{{ articlep.contenu }}</p>
                              
                             </p>
@@ -127,6 +128,7 @@
                             <div class="col-4">
                               <button class=" btn-success"> الاخبار الوطنية </button>
                               <div class="card-body">
+
                                 <p class="card-text mb-0">{{ articlec.contenu }}</p>                               
                                 <p class="card-text">
                                   <small class="card-text">
