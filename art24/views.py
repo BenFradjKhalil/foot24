@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Articles, Articles_principale, Articles_secondaire, Derniers_Articles
+from .models import Articles, Articles_principale, Articles_secondaire
 from django.shortcuts import get_object_or_404
 
 
@@ -9,8 +9,8 @@ def articles_view(request):
     articles=Articles.objects.all()
     articlesp=Articles_principale.objects.all()
     articless=Articles_secondaire.objects.all()
-    darticles=Derniers_Articles.objects.all()
-    return render(request,'art24/articles.html', context={'articles': articles ,'articlesp':articlesp ,'articless':articless,'darticles':darticles})
+   
+    return render(request,'art24/articles.html', context={'articles': articles ,'articlesp':articlesp ,'articless':articless})
 
 
 
