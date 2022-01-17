@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Articles, Articles_principale, Articles_secondaire, Derniers_Articles
-from django.http.response import HttpResponse
+from django.shortcuts import get_object_or_404
+
+
 
 # Create your views here.
 def articles_view(request):
@@ -12,7 +14,11 @@ def articles_view(request):
 
 
 
+def article_view(request, article): 
+    article=Articles.objects.get(slug=article)
+    return render(request,'art24/detail.html', context={'article': article })
 
 
-def article_view(request, slug): 
-    return HttpResponse("Page d'article")
+def articlep_view(request, articlep): 
+    articlep=Articles_principale.objects.get(slug=articlep)
+    return render(request,'art24/detail.html', context={'articlep': articlep})

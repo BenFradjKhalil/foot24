@@ -83,8 +83,10 @@
                         <div class="row">   
                           {% for articlep in articlesp %} 
                             <div class="col-12 mb-3">                          
-                                <div class="card bg-dark text-light text-end">                  
+                                <div class="card bg-dark text-light text-end">
+                                  <a  href="{% url 'articles:articlep' articlep=articlep.slug %}">               
                                 <img src="{{ articlep.images.url }}" class="w-100 card-img-top">
+                              </a>
                                 <div class="card-body">
                                <button class=" btn-success"> الاخبار الوطنية </button>                            
                                <p class="card-text mb-0">{{ articlep.contenu }}</p>
@@ -96,8 +98,10 @@
                             {% endfor %}
                             {% for article in articles %} 
                             <div class=" col-sm-4 mb-3 ">                 
-                              <div class="card bg-dark text-light text-end">                  
+                              <div class="card bg-dark text-light text-end"> 
+                                <a  href="{% url 'articles:articlep' articlep=article.slug %}">              
                                   <img src="{{ article.images.url }}" class="w-100 card-img-top" style="height: 250px;">
+                                </a>
                                   <div class="card-body">
                                   <button class=" btn-success"> الاخبار الوطنية </button>                                
                                   <p class=" mt-2 card-text mb-0">{{ article.contenu }}</p> 
@@ -112,11 +116,13 @@
                             {% for articlec in articless %}
                             
                             <div class="col-2">
+                              
                               <img
                                 src="{{ articlec.images.url }}"
                                 alt="Trendy Pants and Shoes"
                                 class="img-fluid rounded-start"
                               />
+                          
                             </div>
                             <div class="col-4">
                               <button class=" btn-success"> الاخبار الوطنية </button>

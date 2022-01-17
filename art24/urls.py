@@ -23,5 +23,7 @@ app_name='articles'
 
 urlpatterns = [
     path('',views.articles_view, name='art24'),
-    path('<slug:slug>/',views.articles_view, name='article'),
+    path('<slug:articlep>/',views.articlep_view, name='articlep'), 
+      
+    
 ]
