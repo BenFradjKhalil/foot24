@@ -84,9 +84,9 @@
                           {% for articlep in articlesp %} 
                             <div class="col-12 mb-3">                          
                                 <div class="card bg-dark text-light text-end">
-                                  <a  href="{% url 'articles:articlep' articlep=articlep.slug %}">               
+                                                
                                 <img src="{{ articlep.images.url }}" class="w-100 card-img-top">
-                              </a>
+                              
                                 <div class="card-body">
                                <button class=" btn-success"> الاخبار الوطنية </button>                            
                                <p class="card-text mb-0">{{ articlep.contenu }}</p>
@@ -99,7 +99,7 @@
                             {% for article in articles %} 
                             <div class=" col-sm-4 mb-3 ">                 
                               <div class="card bg-dark text-light text-end"> 
-                                <a  href="{% url 'articles:articlep' articlep=article.slug %}">              
+                                <a  href="{% url 'articles:article' article=article.slug %}">              
                                   <img src="{{ article.images.url }}" class="w-100 card-img-top" style="height: 250px;">
                                 </a>
                                   <div class="card-body">

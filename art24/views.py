@@ -19,6 +19,3 @@ def article_view(request, article):
     return render(request,'art24/detail.html', context={'article': article })
 
 
-def articlep_view(request, articlep): 
-    articlep=Articles_principale.objects.get(slug=articlep)
-    return render(request,'art24/detail.html', context={'articlep': articlep})
